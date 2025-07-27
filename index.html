@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 class="modal-title">Заявка на регистрацию для мероприятия</h3>
+            <button class="close-btn" aria-label="Закрыть">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <form class="modal-form" id="registrationForm">
+            <div class="form-group">
+                <label class="form-label" for="event-type">Тип мероприятия *</label>
+                <select class="form-select" id="event-type" required>
+                    <option value="">Выберите вид мероприятия</option>
+                    <option value="conference">Конференция</option>
+                    <option value="workshop">Воркшоп</option>
+                    <option value="masterclass">Мастер-класс</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name">ФИО *</label>
+                <input type="text" class="form-input" id="full-name" placeholder="Введите ФИО" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Имейл *</label>
+                <input type="email" class="form-input" id="email" placeholder="Введите имейл" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="phone">Номер телефона *</label>
+                <input type="tel" class="form-input" id="phone" placeholder="+7 777 77 77" required>
+            </div>
+
+            <div id="friends-container" class="friends-container"></div>
+
+            <div class="form-group">
+                <button type="button" id="add-friend-btn" class="add-friend-btn">
+                    + Добавить друга
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="contact-preference">Предпочитаемый вид связи *</label>
+                <select class="form-select" id="contact-preference" required>
+                    <option value="">Выберите предпочитаемый вид связи</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Телефон</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary">Назад</button>
+                <button type="submit" class="btn btn-primary">Дальше</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
