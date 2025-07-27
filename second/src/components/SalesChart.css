@@ -1,0 +1,15 @@
+.sales-chart {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.sales-chart-title {
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 22px;
+    text-align: center;
+}
